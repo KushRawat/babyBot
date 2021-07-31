@@ -1,0 +1,20 @@
+{
+  "name": "babyBot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KushRawat/babyBot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KushRawat/babyBot/issues"
+  },
+  "homepage": "https://github.com/KushRawat/babyBot#readme"
+}
