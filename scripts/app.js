@@ -5,9 +5,32 @@ form.addEventListener("submit", async (e) => {
   console.log(searchTerm);
 
   axios.defaults.headers.post["apikey"] = "nwkamkkbmfg7dhmuraehv0zbdjdeglnt";
-  const params = new URLSearchParams();
-  params.append("user", searchTerm);
-  axios.post("https://api.gupshup.io/sm/api/v1/app/opt/in/ProjectAppp", params);
+
+  // MARK USER OPT IN
+  let params1 = new URLSearchParams();
+  params1.append("user", `91${searchTerm}`);
+  let res1 = axios.post(
+    "https://api.gupshup.io/sm/api/v1/app/opt/in/ProjectAppp",
+    params1
+  );
+  console.log(res1);
+
+  // TEMPLATE MESSAGING
+  let params2 = new URLSearchParams();
+  params2.append("source", "917834811114");
+  params2.append("destination", `91${searchTerm}`);
+  params2.append("template", {
+    id: "00c5a395-6b01-4bcb-9c08-5fa1013d3291",
+    params: ["200 reward", "Dehradun"],
+  });
+  let res2 = await axios.post(
+    "http://api.gupshup.io/sm/api/v1/template/msg",
+    params2
+  );
+  console.log(res2);
+
+  // MARK USER OPT IN
+
   // async function () {
   //     axios({
   //         method: 'post',
