@@ -20,7 +20,7 @@ form.addEventListener("submit", async (e) => {
   // params2.append("channel", "whatsapp");
   params2.append("source", "917834811114");
   params2.append("destination", `91${searchTerm}`);
-  // params2.append("src.name", "ProjectAppp");
+  params2.append("src.name", "ProjectAppp");
   params2.append("template", {
     id: "00c5a395-6b01-4bcb-9c08-5fa1013d3291",
     params: ["1 million", "KBC"],
