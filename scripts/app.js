@@ -19,18 +19,15 @@ form.addEventListener("submit", async (e) => {
 
   // TEMPLATE MESSAGING
   let params2 = new URLSearchParams();
-  // params2.append("channel", "whatsapp");
+  params2.append("channel", "whatsapp");
   params2.append("source", "917834811114");
   params2.append("destination", `91${searchTerm}`);
-  // params2.append("src.name", "AppAccessAPI");
-  params2.append("template", {
+  params2.append("src.name", "AppAccessAPI");
+  params2.append("message", {
     id: "32ed47bd-ee1f-4202-a16a-42b10570e3f2",
-    params: ["word1", "word2"]
+    params: ["word1", "word2"],
   });
-  let res2 = await axios.post(
-    "http://api.gupshup.io/sm/api/v1/template/msg",
-    params2
-  );
+  let res2 = await axios.post("https://api.gupshup.io/sm/api/v1/msg", params2);
   console.log(res2);
 
   // MARK USER OPT IN
